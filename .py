@@ -24,15 +24,34 @@ bwhite = "\033[0;97m"
 
 message = (bgreen + "LOADING\n")
 
-
-
+massage = message * 10 
+print(message)
+os.system('clear')
 def typewriter(message):
 	for i in message:
 		sys.stdout.write(i)
 		sys.stdout.flush()
 		if ((i != "\n") and (i != ":")):
-			time.sleep(0.09)
+			time.sleep(0.9)
 		else:
-			time.sleep(0.6)
+			time.sleep(0.9)
 
-typewriter(red + 'YO')
+typewriter(red + 'THE END')
+time.sleep(2)
+os.system('clear')
+os.system('clear')
+def typewriter(message):
+	for i in message:
+		sys.stdout.write(i)
+		sys.stdout.flush()
+		if ((i != "\n") and (i != ":")):
+			time.sleep(0.9)
+		else:
+			time.sleep(0.9)
+
+
+			
+typewriter('VROOM, you here the sound of the bus. Your just playing video games on your phone.')
+
+
+
