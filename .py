@@ -214,5 +214,27 @@ elif ePaper == "N":
   typewriter('Your loss, lets move on. ')
 
 #*********************************************************
+
+
 print('______________________________* 1 HOUR LATER *_________________________________')
 time.sleep(2)
+os.system('clear')
+typewriter('Your arrive at your house. Your moms greets you. "How was school bud? ". "Fine I guess, the newbie bus driver side-swiped the curb today."."Well, that\'s what you get when a school hires someone with no experince.". "Ok... well I\'m going up to my room to play some video games and Justin.". "K hon!"')
+time.sleep(2)
+os.system('clear')
+typewriter(yellow + 'You run up to your room and get on your computer and call your closest friend, Justin. ')
+time.sleep(2)
+os.system('clear')
+print('wat up dude?')
+time.sleep(2)
+print('not much, you?')
+time.sleep(2)
+print('welp, im gr8')
+time.sleep(2)
+print('wanna get on cod?')
+time.sleep(2)
+print('sure, No0b')
+time.sleep(2)
+print('OH, your on!!')
+time.sleep(2)
+os.system('clear')
