@@ -45,13 +45,13 @@ def typewriter(message):
 		sys.stdout.write(i)
 		sys.stdout.flush()
 		if ((i != "\n") and (i != ":")):
-			time.sleep(0.9)
+			time.sleep(0.08)
 		else:
-			time.sleep(0.9)
+			time.sleep(0.2)
 
 
 			
-typewriter('VROOM, you here the sound of the bus. Your just playing video games on your phone.')
+typewriter('VROOM, you here the sound of the bus. Your just playing video games on your phone. PEW, PEW, PEW. Then you hear a sudden thud. But that was normal  ')
 
 
 
