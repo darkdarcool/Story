@@ -214,4 +214,5 @@ elif ePaper == "N":
   typewriter('Your loss, lets move on. ')
 
 #*********************************************************
-typewriter('YO')
+print('______________________________* 1 HOUR LATER *_________________________________')
+time.sleep(2)
