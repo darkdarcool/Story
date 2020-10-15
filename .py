@@ -1,7 +1,7 @@
 import os,random
 import time, sys
 
-
+xp = 0
 #colors
 
 black = "\033[0;30m"
@@ -25,7 +25,7 @@ bwhite = "\033[0;97m"
 
 
 
-print(message)
+
 os.system('clear')
 def typewriter(message):
 	for i in message:
@@ -56,146 +56,162 @@ time.sleep(2)
 os.system('clear')
 typewriter('You go back to playing your game.')
 time.sleep(1)
-ePaper = input('Would you like to try a game on your phone that your younger couson made you? You will get 200 more xp! \n[Y/N]').upper()
+os.system('clear')
+ePaper = input('Would you like to try a game on your phone that your younger couson made you? You will get 200 more xp! \n[Y/N]\n').upper()
 ePaper = ePaper.upper()
 if ePaper == "Y":
-	typewriter('You tap on the app')
-os.system('clear')
-game = ('█▀█ ▄▀█ █▄░█ █▄▀')
-game2 = ('\n█▀▄ █▀█ █░▀█ █░█')          
-
-print()
-print()
-xr = ('\n██╗░░██╗')
-xs = ('\n╚██╗██╔╝')
-xd = ('\n░╚███╔╝░')
-xa = ('\n░██╔██╗░')
-xz = ('\n██╔╝╚██╗')
-xh = ('\n╚═╝░░╚═╝')
-typewriter(red + game)
-typewriter(red + game2)
-typewriter(red + xr)
-typewriter(red + xs)
-typewriter(red + xd)
-typewriter(red + xa)
-typewriter(red + xz)
-typewriter(red + xh)
-print()
-os.system('clear')
-print(yellow + """             
-						PAPER: THE GAME""")
-
-print(blue + "              PRESS ENTER")
-
-blank = ''
-inpt = input('')
-if inpt == blank:
-	os.system("clear")
-elif input != blank:
-	print(red + 'Please press Enter')
-else:
-	print(red + 'An Error occured.\nPress Enter')
-time.sleep(5)
-os.system('clear')
+ typewriter('You tap on the app')
+ time.sleep(2)
+ os.system('clear')
+ game = ('█▀█ ▄▀█ █▄░█ █▄▀')
+ game2 = ('\n█▀▄ █▀█ █░▀█ █░█')          
+ time.sleep(1.5)
+ os.system('clear')
+ print()
+ print()
+ xr = ('\n██╗░░██╗')
+ xs = ('\n╚██╗██╔╝')
+ xd = ('\n░╚███╔╝░')
+ xa = ('\n░██╔██╗░')
+ xz = ('\n██╔╝╚██╗')
+ xh = ('\n╚═╝░░╚═╝')
+ typewriter(red + game)
+ typewriter(red + game2)
+ typewriter(red + xr)
+ typewriter(red + xs)
+ typewriter(red + xd)
+ typewriter(red + xa)
+ typewriter(red + xz)
+ typewriter(red + xh)
+ print()
+ time.sleep(2)
+ os.system('clear')
+ print(yellow + """             
+ 						PAPER: THE GAME""")
+  
+ print(blue + "              PRESS ENTER")
+ 
+ blank = ''
+ inpt = input('')
+ if inpt == blank:
+ 	os.system("clear")
+ elif input != blank:
+  	print(red + 'Please press Enter')
+ else:
+  print(red + 'An Error occured.\nPress Enter')
+  time.sleep(5)
+  os.system('clear')
 
 ## Now, the game
-enemies = [
-    'Paper Demon',
-    'Paper Throwing AI',
-    'Oragami King',
-    'Oragami Queen',
-    'Oragami Prince',
-    'Oragami Princess',
-    'Paper God',
-]
-enemy_name = random.choice(enemies)
-enemy_health = 120
-enemy_accuracy = 0.4
-enemy_damage = 15
+ enemies = [
+     'Paper Demon',
+     'Paper Throwing AI',
+     'Oragami King',
+     'Oragami Queen',
+     'Oragami Prince',
+     'Oragami Princess',
+     'Paper God',
+ ]
+ enemy_name = random.choice(enemies)
+ enemy_health = 120
+ enemy_accuracy = 0.4
+ enemy_damage = 15
 
-player_health = 80
-player_accuracy = 0.8
-player_damage = 20
-heals_left = 3
-heal_amount = 10
+ player_health = 80
+ player_accuracy = 0.8
+ player_damage = 20
+ heals_left = 3
+ heal_amount = 10  
 
 
-def heal_player(amount):
+ def heal_player(amount):
     global player_health
 
     player_health += amount
     player_health = player_health + amount
 
 
-def attack_enemy(amount):
-    global enemy_health
-    enemy_health -= amount
-    print('You hit the enemy with your piece of your sharp paper!')
+ def attack_enemy(amount):
+     global enemy_health
+     enemy_health -= amount
+     print('You hit the enemy with your piece of your sharp paper!')
 
 
-def attack_player(amount):
-    global player_health
-    player_health -= amount
-    print('You were hit by the enemies paper! ')
+ def attack_player(amount):
+     global player_health
+     player_health -= amount
+     print('You were hit by the enemies paper! ')
 
 
-print('A ' + enemy_name + ' has challenged you to a paper war!')
-print()
-while player_health > 0:
-    print(enemy_name + ' HP: ' + str(enemy_health))
-    print('Your HP: ' + str(player_health))
-    print('Heals papers left: ' + str(heals_left))
-    print()
-    action = input('Attack or heal? ')
-    print()
+ print('A ' + enemy_name + ' has challenged you to a paper war!')
+ print()
+ while player_health > 0:
+     print(enemy_name + ' HP: ' + str(enemy_health))
+     print('Your HP: ' + str(player_health))
+     print('Heals papers left: ' + str(heals_left))
+     print()
+     action = input('Attack or heal? ')
+     print()
 
-    if action == "attack":
-        player_roll = random.randint(1, 10)
+     if action == "attack":
+         player_roll = random.randint(1, 10)
 
-        if player_roll < player_accuracy * 10:
-            attack_enemy(player_damage)
+         if player_roll < player_accuracy * 10:
+             attack_enemy(player_damage)
 
-            if enemy_health <= 0:
-                print('You win, you beat (a) (the) ' + enemy_name +
+             if enemy_health <= 0:
+                 print('You win, you beat (a) (the) ' + enemy_name +
                       '. You are now a paper master!!')
-                break
-        else:
-            print('You missed your paper shot!')
+                 break
+         else:
+             print('You missed your paper shot!')
 
-    elif action == 'heal':
-        if player_health == 350:
+     elif action == 'heal':
+         if player_health == 350:
             print('You have full health, you cannot use a heal paper.')
-        else:
-            if heals_left:
-                heal_player(heal_amount)
-                heals_left -= 1
-            else:
-                print('You are out of heal paper!')
+         else:
+             if heals_left:
+                 heal_player(heal_amount)
+                 heals_left -= 1
+             else:
+                 print('You are out of heal paper!')
 
-    time.sleep(1)
-    enemy_roll = random.randint(1, 10)
-    if enemy_roll < enemy_accuracy * 10:
+     time.sleep(1)
+     enemy_roll = random.randint(1, 10)
+     if enemy_roll < enemy_accuracy * 10:
         attack_player(enemy_damage)
 
         if player_health <= 0:
-            print(
+             print(
                 'You got pummeled by the enemies papers, better luck next time!'
             )
-    else:
-        print(enemy_name + ' missed! ')
+        else:
+         print(enemy_name + ' missed! ')
 
-    print()
-    print('******************')
-    print()
+     print()
+     print('******************')
+     print()
 
-if player_health <= 0:
-  looser = ( red + '"LOL, you lost, you owe me whatever this apocalypse money will be!"')
-  typewriter(looser)
-elif enemy_health <= 0:
-  wiiner = (red + '"Well, I guess I owe you whatever apocalypse money will be."')
-  typewriter(wiiner)
-os.system('clear')
+ if player_health <= 0:
+   looser = ( red + 'Your pretty mad that you lost, but whatever. You still played!!')
+   typewriter(looser)
+   time.sleep(1)
+   os.system('clear')
+   print('+ 200 XP')
+   xp += 200
+   time.sleep(2)
+ 
+ elif enemy_health <= 0:
+   wiiner = (red + 'You are pretty happy that you won! You played and won! ')
+   typewriter(wiiner)
+   time.sleep(1)
+   os.system('clear')
+   print('+ 200 XP')
+   xp += 200
+   time.sleep(2)
+ os.system('clear')
+elif ePaper == "N":
+  typewriter('Your loss, lets move on. ')
 
 #*********************************************************
-
-
+typewriter('YO')
