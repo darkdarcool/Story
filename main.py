@@ -39,7 +39,7 @@ def typewriter(message):
 		else:
 			time.sleep(0.9)
 
-typewriter(red + 'THE END')
+typewriter(red + 'THE ' + end + bold + green + 'GLITCH')
 time.sleep(2)
 os.system('clear')
 os.system('clear')
@@ -398,7 +398,7 @@ os.system('clear')
    xp += 200
    time.sleep(2)
  os.system('clear')
-typewriter('')
+typewriter('You think that it was ')
 
 
 
