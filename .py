@@ -398,6 +398,7 @@ os.system('clear')
    xp += 200
    time.sleep(2)
  os.system('clear')
+typewriter('')
 
 
 
