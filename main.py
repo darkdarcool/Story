@@ -1,5 +1,13 @@
 import os,random
 import time, sys
+workflow "Example Workflow" {
+  on = "push"
+  resolves = ["Lint"]
+}
+
+action "Lint" {
+  uses = "lgeiger/pyflakes-action@master"
+}
 player_damage1 = 20
 xp = 0
 if xp =< 400:
@@ -388,7 +396,6 @@ os.system('clear')
 
    
    time.sleep(2)
- 
  elif enemy_health <= 0:
    wiiner = (red + 'You are pretty happy that you won! You played and won! ')
    typewriter(wiiner)
@@ -398,8 +405,13 @@ os.system('clear')
    xp += 200
    time.sleep(2)
  os.system('clear')
-typewriter('You think that it was ')
-
+typewriter('You think that it was a lame game that had a ton of glitches, so you put it is your backpack and go back downstairs.')
+time.sleep(1.5)
+os.system('clear')
+print(red + '_____________________________*~GLITCH IN THE SYSTEM~*_________________________________')
+print('Credits: ')
+print('Words: DarkDarcool')
+print('Battle Design: DarkDarcool')
 
 
 
