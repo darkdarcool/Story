@@ -408,10 +408,16 @@ os.system('clear')
 typewriter('You think that it was a lame game that had a ton of glitches, so you put it is your backpack and go back downstairs.')
 time.sleep(1.5)
 os.system('clear')
+time.sleep(2)
 print(red + '_____________________________' + green + '*~GLITCH IN THE SYSTEM~*' + red + '_________________________________')
+time.sleep(1)
 print(blue + 'Credits: ')
-print('Words: DarkDarcool')
-print('Battle Design: DarkDarcool')
+time.sleep(1)
+print('Story Design: DarkDarcool')
+time.sleep(1)
+print('Programming : DarkDarcool')
+time.sleep(5)
+os.system('clear')
 
 
 
