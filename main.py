@@ -409,7 +409,7 @@ typewriter('You think that it was a lame game that had a ton of glitches, so you
 time.sleep(1.5)
 os.system('clear')
 time.sleep(2)
-print(red + '_____________________________' + green + '*~GLITCH IN THE SYSTEM~*' + red + '_________________________________')
+print(red + '_________________________________' + green + '`*-~GLITCH IN THE SYSTEM~-*`' + red + '_________________________________')
 time.sleep(1)
 print(blue + 'Credits: ')
 time.sleep(1)
