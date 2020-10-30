@@ -1,16 +1,8 @@
 import os,random
 import time, sys
-workflow "Example Workflow" {
-  on = "push"
-  resolves = ["Lint"]
-}
-
-action "Lint" {
-  uses = "lgeiger/pyflakes-action@master"
-}
 player_damage1 = 20
 xp = 0
-if xp =< 400:
+if xp <= 400:
 	player_damage1 + 5
 
 #colors
@@ -31,6 +23,8 @@ bblue = "\033[0;94m"
 bmagenta = "\033[0;95m"
 bcyan = "\033[0;96m"
 bwhite = "\033[0;97m"
+bold = '\033[1m'
+end = '\033[0m'
 
 
 
@@ -257,49 +251,49 @@ os.system('clear')
 typewriter(magenta + 'After dinner, you run to your room upstairs to see what the gameboy was all about. You pick it up, and his start, then the pixels start loading. It looks like the game your couson made you 0-0 ')
 time.sleep(2)
 os.system('clear')
- game = ('█▀█ ▄▀█ █▄░█ █▄▀')
- game2 = ('\n█▀▄ █▀█ █░▀█ █░█')          
- time.sleep(1.5)
- os.system('clear')
- print()
- print()
- print()
- print()
- xr = ('\n██╗░░██╗')
- xs = ('\n╚██╗██╔╝')
- xd = ('\n░╚███╔╝░')
- xa = ('\n░██╔██╗░')
- xz = ('\n██╔╝╚██╗')
- xh = ('\n╚═╝░░╚═╝')
- typewriter(red + game)
- typewriter(red + game2)
- typewriter(red + xr)
- typewriter(red + xs)
- typewriter(red + xd)
- typewriter(red + xa)
- typewriter(red + xz)
- typewriter(red + xh)
- print()
- time.sleep(2)
- os.system('clear')
- print(yellow + """             
+game = ('█▀█ ▄▀█ █▄░█ █▄▀')
+game2 = ('\n█▀▄ █▀█ █░▀█ █░█')          
+time.sleep(1.5)
+os.system('clear')
+print()
+print()
+print()
+print()
+xr = ('\n██╗░░██╗')
+xs = ('\n╚██╗██╔╝')
+xd = ('\n░╚███╔╝░')
+xa = ('\n░██╔██╗░')
+xz = ('\n██╔╝╚██╗')
+xh = ('\n╚═╝░░╚═╝')
+typewriter(red + game)
+typewriter(red + game2)
+typewriter(red + xr)
+typewriter(red + xs)
+typewriter(red + xd)
+typewriter(red + xa)
+typewriter(red + xz)
+typewriter(red + xh)
+print()
+time.sleep(2)
+os.system('clear')
+print(yellow + """             
  						PAPER: THE GAME""")
   
- print(blue + "              PRESS ENTER")
+print(blue + "              PRESS ENTER")
  
- blank = ''
- inpt = input('')
- if inpt == blank:
- 	os.system("clear")
- elif input != blank:
+blank = ''
+inpt = input('')
+if inpt == blank:
+  os.system("clear")
+elif input != blank:
   	print(red + 'Please press Enter')
- else:
+else:
   print(red + 'An Error occured.\nPress Enter')
   time.sleep(5)
   os.system('clear')
 
 ## Now, the game
- enemies = [
+enemies = [
      'Paper Demon',
      'Paper Throwing AI',
      'Oragami King',
@@ -307,41 +301,40 @@ os.system('clear')
      'Oragami Prince',
      'Oragami Princess',
      'Paper God',
- ]
- enemy_name = random.choice(enemies)
- enemy_health = 120
- enemy_accuracy = 0.4
- enemy_damage = 15
+]
+enemy_name = random.choice(enemies)
+enemy_health = 120
+enemy_accuracy = 0.4
+enemy_damage = 15
 
- player_health = 80
- player_accuracy = 0.8
- player_damage = player_damage1
- heals_left = 3
- heal_amount = 10  
-
-
- def heal_player(amount):
-    global player_health
-
-    player_health += amount
-    player_health = player_health + amount
+player_health = 80
+player_accuracy = 0.8
+player_damage = player_damage1
+heals_left = 3
+heal_amount = 10  
 
 
- def attack_enemy(amount):
+def heal_player(amount):
+  global player_health
+
+  player_health += amount
+  player_health = player_health + amount
+
+def attack_enemy(amount):
      global enemy_health
      enemy_health -= amount
      print('You hit the enemy with your piece of your sharp paper!')
 
 
- def attack_player(amount):
+def attack_player(amount):
      global player_health
      player_health -= amount
      print('You were hit by the enemies paper! ')
 
 
- print('A ' + enemy_name + ' has challenged you to a paper war!')
- print()
- while player_health > 0:
+print('A ' + enemy_name + ' has challenged you to a paper war!')
+print()
+while player_health > 0:
      print(enemy_name + ' HP: ' + str(enemy_health))
      print('Your HP: ' + str(player_health))
      print('Heals papers left: ' + str(heals_left))
@@ -388,7 +381,7 @@ os.system('clear')
      print('******************')
      print()
 
- if player_health <= 0:
+if player_health <= 0:
    looser = ( red + 'Your pretty mad that you lost, but whatever. You still played!!')
    typewriter(looser)
    time.sleep(1)
@@ -396,7 +389,7 @@ os.system('clear')
 
    
    time.sleep(2)
- elif enemy_health <= 0:
+elif enemy_health <= 0:
    wiiner = (red + 'You are pretty happy that you won! You played and won! ')
    typewriter(wiiner)
    time.sleep(1)
@@ -404,7 +397,7 @@ os.system('clear')
    print('+ 200 XP')
    xp += 200
    time.sleep(2)
- os.system('clear')
+   os.system('clear')
 typewriter('You think that it was a lame game that had a ton of glitches, so you put it is your backpack and go back downstairs.')
 time.sleep(1.5)
 os.system('clear')
