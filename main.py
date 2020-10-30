@@ -41,7 +41,7 @@ def typewriter(message):
 		else:
 			time.sleep(0.9)
 
-typewriter(red + 'THE ' + end + bold + green + 'GLITCH')
+typewriter(red + 'THE ' + green + 'GLITCH')
 time.sleep(2)
 os.system('clear')
 os.system('clear')
@@ -411,6 +411,7 @@ time.sleep(1)
 print('Programming : DarkDarcool')
 time.sleep(5)
 os.system('clear')
-
-
-
+typewriter(red + 'That is all for right now folks! I hope to make more! ')
+time.sleep(10)
+os.system('clear')
+print(green + 'WHY ARE YOU STILL HERE, LEAVE!!!!')
